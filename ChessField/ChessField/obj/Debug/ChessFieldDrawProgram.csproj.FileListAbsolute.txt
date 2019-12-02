@@ -1,0 +1,10 @@
+D:\proga\courses\ChessField\ChessField\obj\Debug\ChessFieldDrawProgram.csprojAssemblyReference.cache
+D:\proga\courses\ChessField\ChessField\obj\Debug\ChessField.exe
+D:\proga\courses\ChessField\ChessField\obj\Debug\ChessField.pdb
+D:\proga\courses\ChessField\ChessField\bin\Debug\ChessField.exe.config
+D:\proga\courses\ChessField\ChessField\bin\Debug\ChessField.exe
+D:\proga\courses\ChessField\ChessField\bin\Debug\ChessField.pdb
+D:\proga\courses\ChessField\ChessField\bin\Debug\NLog.config
+D:\proga\courses\ChessField\ChessField\bin\Debug\NLog.dll
+D:\proga\courses\ChessField\ChessField\bin\Debug\NLog.xml
+D:\proga\courses\ChessField\ChessField\obj\Debug\ChessFieldDrawProgram.csproj.CopyComplete

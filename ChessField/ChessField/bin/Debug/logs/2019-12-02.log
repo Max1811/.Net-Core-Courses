@@ -1,0 +1,20 @@
+2019-12-02 14:44:10.9334 DEBUG Field created
+2019-12-02 14:44:10.9593 DEBUG Trying to read parameters
+2019-12-02 14:44:10.9643 DEBUG Params converted
+2019-12-02 14:44:10.9643 DEBUG Trying to draw field
+2019-12-02 14:44:10.9816 DEBUG Field has been drawn
+2019-12-02 14:44:10.9816 ERROR -----------------------------------------------------------
+2019-12-02 14:44:12.1432 DEBUG Field created
+2019-12-02 14:44:12.1701 DEBUG Trying to read parameters
+2019-12-02 14:44:12.1931 ERROR Fail to read parametrs
+2019-12-02 14:44:12.2020 ERROR -----------------------------------------------------------
+2019-12-02 14:57:08.8236 DEBUG Field created
+2019-12-02 14:57:08.8636 DEBUG Trying to read parameters
+2019-12-02 14:57:08.8696 ERROR Wrong number of parametrs
+2019-12-02 14:57:10.1667 INFO -----------------------------------------------------------
+2019-12-02 14:57:21.6722 DEBUG Field created
+2019-12-02 14:57:21.7031 DEBUG Trying to read parameters
+2019-12-02 14:57:21.7031 DEBUG Params converted
+2019-12-02 14:57:21.7120 DEBUG Trying to draw field
+2019-12-02 14:57:21.7120 DEBUG Field has been drawn
+2019-12-02 14:57:21.7120 INFO -----------------------------------------------------------
