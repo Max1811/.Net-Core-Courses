@@ -1,6 +1,0 @@
-D:\proga\courses\ChessField\ChessField\bin\Debug\ChessField.exe.config
-D:\proga\courses\ChessField\ChessField\bin\Debug\ChessField.exe
-D:\proga\courses\ChessField\ChessField\bin\Debug\ChessField.pdb
-D:\proga\courses\ChessField\ChessField\obj\Debug\ChessField.csprojAssemblyReference.cache
-D:\proga\courses\ChessField\ChessField\obj\Debug\ChessField.exe
-D:\proga\courses\ChessField\ChessField\obj\Debug\ChessField.pdb

@@ -1,0 +1,10 @@
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\obj\Debug\ChessFieldDraw.csprojAssemblyReference.cache
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\bin\Debug\NLog.config
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\bin\Debug\ChessFieldDraw.exe.config
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\bin\Debug\ChessFieldDraw.exe
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\bin\Debug\ChessFieldDraw.pdb
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\bin\Debug\NLog.dll
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\bin\Debug\NLog.xml
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\obj\Debug\ChessFieldDraw.csproj.CopyComplete
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\obj\Debug\ChessFieldDraw.exe
+D:\proga\courses\.Net-Core-Courses\ChessFieldDraw\ChessFieldDraw\obj\Debug\ChessFieldDraw.pdb
