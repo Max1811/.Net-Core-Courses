@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ChessFieldDraw.FieldComponents
 {
-    public struct Cell
+    public enum CellColors
     {
-        public CellColors Color { get; set; }
-
+        Black,
+        White
     }
 }

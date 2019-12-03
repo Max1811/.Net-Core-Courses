@@ -52,7 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FieldComponents\Cell.cs" />
+    <Compile Include="FieldComponents\CellColors.cs" />
+    <Compile Include="FieldComponents\CellSymbols.cs" />
     <Compile Include="FieldComponents\ChessField.cs" />
+    <Compile Include="FieldComponents\FieldMethods.cs" />
+    <Compile Include="FieldComponents\FieldSizing.cs" />
     <Compile Include="Messages\MessagesText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

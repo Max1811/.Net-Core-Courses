@@ -6,44 +6,35 @@ using System.Threading.Tasks;
 
 namespace ChessFieldDraw.FieldComponents
 {
-    public class ChessField: Cell
+    public class ChessField : FieldSizing
     {
-        private int Width { get; set; }
-        private int Height { get; set; }
-
-        public ChessField()
-            : base()
+        private Cell[,] field;
+        
+        public ChessField(int width, int height)
+            : base(width, height)
         {
-
+            field = new Cell[Width, Height];
+            FieldMethods.InitializeField(field, Width, Height);
         }
 
-        public ChessField(int width, int height, char symbol)
-            : base(symbol)
+        public Cell this[int width, int height]
         {
-            Width = width;
-            Height = height;
-        }
-
-        public void DrawField()
-        {
-            for (int x = 0; x < this.Width; x++)
+            get
             {
-                string line = "";
-                for (int y = 0; y < this.Height; y++)
-                {
-                    if ((x + y) % 2 == 1)
-                    {
-                        line += CellSymbol;
-                    }
-                    else
-                    {
-                        line += ' ';
-                    }
-                }
-                Console.WriteLine(line);
+                return field[width, height];
+            }
+            set
+            {
+                field[width, height] = value;
             }
         }
 
+        
+
+        public void DrawField(CellSymbols symbols)
+        {
+            FieldMethods.DisplayField(field, Width, Height, symbols);
+        }
     }
 }
 

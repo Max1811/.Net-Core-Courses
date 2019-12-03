@@ -16,26 +16,32 @@ namespace ChessFieldDraw
         {
 
             ChessField field;
+            CellSymbols displaySymbols;
+
             logger.Debug("Field created");
             logger.Debug("Trying to read parameters");
+
             int width = 0, height = 0;
-            char symbol =' ';
-            if (args.Length == 3)
+            char whiteSymbol =' ', blackSymbol = ' ';
+
+            if (args.Length == 4)
             {
                 try
                 {
-                    
+
                     Int32.TryParse(args[0], out width);
                     Int32.TryParse(args[1], out height);
-                    Char.TryParse(args[2], out symbol);
+                    Char.TryParse(args[2], out whiteSymbol);
+                    Char.TryParse(args[3], out blackSymbol);
                     logger.Debug("Params converted");
 
-                    field = new ChessField(width, height, symbol);
+                    displaySymbols = new CellSymbols(whiteSymbol, blackSymbol);
+                    field = new ChessField(width, height);
 
                     try
                     {
                         logger.Debug("Trying to draw field");
-                        field.DrawField();
+                        field.DrawField(displaySymbols);
                         logger.Debug("Field has been drawn");
                     }
                     catch (Exception ex)
@@ -50,7 +56,7 @@ namespace ChessFieldDraw
                     logger.Error("Fail to read parametrs");
                 }
             }
-            else
+            else if(args.Length < 4)
             {
                 logger.Error("Wrong number of parametrs");
 
@@ -74,11 +80,15 @@ namespace ChessFieldDraw
                                 Console.WriteLine(MessagesText.InputHeight);
                                 height = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(MessagesText.InputSymbol);
-                                symbol = Convert.ToChar(Console.ReadLine());
+                                Console.WriteLine(MessagesText.InputWhiteSymbol);
+                                whiteSymbol = Convert.ToChar(Console.ReadLine());
 
-                                field = new ChessField(height, width, symbol);
-                                field.DrawField();
+                                Console.WriteLine(MessagesText.InputBlackSymbol);
+                                blackSymbol = Convert.ToChar(Console.ReadLine());
+
+                                field = new ChessField(width, height);
+                                displaySymbols = new CellSymbols(blackSymbol, whiteSymbol);
+                                field.DrawField(displaySymbols);
                             }
                             
                             catch(Exception ex)
@@ -97,11 +107,16 @@ namespace ChessFieldDraw
                 //switch (message)
 
             }
+            else
+            {
+
+            }
 
             logger.Info(new string('-',50));
 
             Console.ReadKey();
         }
+        
 
 
     }
