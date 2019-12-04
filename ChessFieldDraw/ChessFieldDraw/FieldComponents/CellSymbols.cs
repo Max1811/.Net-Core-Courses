@@ -11,8 +11,6 @@ namespace ChessFieldDraw.FieldComponents
         public char WhiteSymb { get; set; }
         public char BlackSymb { get; set; }
 
-        
-
         public CellSymbols()
         {
             WhiteSymb = ' ';

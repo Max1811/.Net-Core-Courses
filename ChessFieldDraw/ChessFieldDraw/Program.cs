@@ -64,20 +64,23 @@ namespace ChessFieldDraw
                 Console.WriteLine(MessagesText.Info);
                 while (flag)
                 {
+                    logger.Debug("Looping switch");
                     string message = Console.ReadLine().ToLower();
                     switch (message)
                     {
                         case MessagesText.HelpMessage:
+                            logger.Debug("Writing info");
                             Console.WriteLine(MessagesText.Info);
                             break;
                         case MessagesText.StartMessage:
-                            
+                            logger.Debug("Starting program:");
                             try
                             {
-                                Console.WriteLine(MessagesText.InputWidth);
+                                logger.Debug("Trying to convert data");
+                                Console.WriteLine(MessagesText.InputHeight);
                                 width = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(MessagesText.InputHeight);
+                                Console.WriteLine(MessagesText.InputWidth);
                                 height = Convert.ToInt32(Console.ReadLine());
 
                                 Console.WriteLine(MessagesText.InputWhiteSymbol);
@@ -89,17 +92,20 @@ namespace ChessFieldDraw
                                 field = new ChessField(width, height);
                                 displaySymbols = new CellSymbols(blackSymbol, whiteSymbol);
                                 field.DrawField(displaySymbols);
+                                logger.Debug("Data converted");
                             }
                             
                             catch(Exception ex)
                             {
-                                
+                                logger.Debug("Failed to convert" + ex.Message);
                             }
                             break;
                         case MessagesText.EndMessage:
+                            logger.Debug("Ending program");
                             flag = false;
                             break;
                         default:
+                            logger.Debug("Not usual string was written");
                             break;
                     }
                 }
@@ -109,7 +115,7 @@ namespace ChessFieldDraw
             }
             else
             {
-
+                logger.Error("Wrong number of parametrs ( > 4 )");
             }
 
             logger.Info(new string('-',50));
