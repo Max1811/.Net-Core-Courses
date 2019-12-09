@@ -108,6 +108,7 @@ namespace ChessFieldDraw
                             logger.Debug("Not usual string was written");
                             break;
                     }
+                    logger.Info(new string('-', 50));
                 }
 
                 //switch (message)
@@ -118,7 +119,7 @@ namespace ChessFieldDraw
                 logger.Error("Wrong number of parametrs ( > 4 )");
             }
 
-            logger.Info(new string('-',50));
+            
 
             Console.ReadKey();
         }

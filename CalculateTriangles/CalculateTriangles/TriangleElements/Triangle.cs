@@ -6,28 +6,69 @@ using System.Threading.Tasks;
 
 namespace CalculateTriangles.TriangleElements
 {
-    public class Triangle: Trianglesizing
+    public class Triangle : IFigure, IComparable<Triangle>
     {
-        private string Name { get; set; }
-        private double TriangleSquare { get; set; }
+        public string Name { get; set; }
+        public int NumberOfSides { get; set; } = 3;
+        public double[] Sides { get; set; }
+        public double Perimetr { get; set; }
+        public double Square { get; set; }
 
-        public Triangle()
+        public Triangle(string name, params double[] integers)
         {
-            Name = "Undefined";
+            Name = name;
+            Sides = integers;
+            CountPerimetr();
+            CountSquare();
         }
 
-        public Triangle(string name, double firstSide, double secondSide, double thirdSide)
-            :base(firstSide, secondSide, thirdSide)
+        private double _halfPerimetr { get; set; }
+        public void CountPerimetr()
         {
-            this.Name = name;
+            if (Sides.Length == NumberOfSides)
+            {
+                double sum = 0;
+                foreach (var item in Sides)
+                {
+                    sum += item;
+                }
+                this.Perimetr = sum;
+                _halfPerimetr = Perimetr / 2;
+            }
         }
 
-        public double CalculateSquare()
+        public void CountSquare()
         {
-            double halfPerimetr = (FirstSide + SecondSide + ThirdSide) / 3;
-            TriangleSquare = Math.Sqrt(halfPerimetr * (halfPerimetr - FirstSide)*(halfPerimetr - SecondSide)*(halfPerimetr - ThirdSide));
-            return TriangleSquare;
+            if(Sides.Length == NumberOfSides)
+            {
+                double _firstSide = Sides[0];
+                double _secondSide = Sides[1];
+                double _thirdSide = Sides[2];
+
+                Square = Math.Sqrt(_halfPerimetr * (_halfPerimetr - _firstSide) * (_halfPerimetr - _secondSide) * (_halfPerimetr - _thirdSide));
+            }
         }
 
+        public int CompareTo(Triangle obj)
+        {
+            if (Square > obj.Square)
+            {
+                return -1;
+            }
+            else if (Square < obj.Square)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public override string ToString()
+        {
+            string triangleWriteline = $"Name: {Name}, Square: {Square}";
+            return triangleWriteline;
+        }
     }
 }

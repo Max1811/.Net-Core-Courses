@@ -1,0 +1,10 @@
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\bin\Debug\CalculateTriangles.exe.config
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\bin\Debug\CalculateTriangles.exe
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\bin\Debug\CalculateTriangles.pdb
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\obj\Debug\CalculateTriangles.csprojAssemblyReference.cache
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\obj\Debug\CalculateTriangles.exe
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\obj\Debug\CalculateTriangles.pdb
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\bin\Debug\FluentValidation.dll
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\bin\Debug\System.ComponentModel.Annotations.dll
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\bin\Debug\FluentValidation.xml
+D:\proga\courses\.Net-Core-Courses\CalculateTriangles\CalculateTriangles\obj\Debug\CalculateTriangles.csproj.CopyComplete
