@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace ChessFieldDraw.FieldComponents
 {
     public abstract class FieldSizing
     {
-        protected int Width { get; set; }
-        protected int Height { get; set; }
+        public int Width { get; protected set; }
+        public int Height { get; protected set; }
 
         public FieldSizing()
         {

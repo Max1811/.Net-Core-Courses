@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculateTriangles.TriangleElements
 {
-    public class Triangle : IFigure, IComparable<Triangle>
+    public class Triangle : IShape, IComparable<Triangle>
     {
         public string Name { get; set; }
         public int NumberOfSides { get; set; } = 3;
@@ -39,7 +35,7 @@ namespace CalculateTriangles.TriangleElements
 
         public void CountSquare()
         {
-            if(Sides.Length == NumberOfSides)
+            if (Sides.Length == NumberOfSides)
             {
                 double _firstSide = Sides[0];
                 double _secondSide = Sides[1];

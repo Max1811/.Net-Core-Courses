@@ -2,11 +2,6 @@
 using CalculateTriangles.TriangleElements;
 using CalculateTriangles.Validation;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculateTriangles.UserInterface
 {
@@ -15,8 +10,7 @@ namespace CalculateTriangles.UserInterface
         public static void Start(string[] args)
         {
             Triangle triangle;
-            SortedFigures<Triangle> triangles = new SortedFigures<Triangle>();
-            
+            SortedShapes<Triangle> triangles = new SortedShapes<Triangle>();
 
             string _triangleParams = "";
 
@@ -36,6 +30,7 @@ namespace CalculateTriangles.UserInterface
                     {
                         case TextMessages.HelpMessage:
                             Console.WriteLine(TextMessages.Info);
+
                             break;
                         case TextMessages.UsersAnswer:
 
@@ -44,7 +39,7 @@ namespace CalculateTriangles.UserInterface
 
                             triangle = ParseTriangleParams(_triangleParams);
 
-                            if(triangle == null)
+                            if (triangle == null)
                             {
                                 Console.WriteLine(TextMessages.WrongParametrs);
                                 Console.WriteLine(TextMessages.ContinueInputting);
@@ -61,7 +56,7 @@ namespace CalculateTriangles.UserInterface
                                 Console.WriteLine(TextMessages.InputtingError);
                                 Console.WriteLine(TextMessages.ContinueInputting);
                             }
-                            
+
                             break;
                         case TextMessages.DisplaySortedFigures:
 
@@ -71,9 +66,11 @@ namespace CalculateTriangles.UserInterface
                             break;
                         case TextMessages.EndMessage:
                             flag = false;
+
                             break;
                         default:
                             Console.WriteLine(TextMessages.Info);
+
                             break;
                     }
                 }
@@ -85,7 +82,7 @@ namespace CalculateTriangles.UserInterface
             string[] words = triangleParams.Split(',');
             string name = words[0];
             const int NUMBER_OF_PARAMETRS = 4;
-            if(words.Length == NUMBER_OF_PARAMETRS)
+            if (words.Length == NUMBER_OF_PARAMETRS)
             {
                 double fSide, sSide, tSide;
                 try
@@ -101,7 +98,7 @@ namespace CalculateTriangles.UserInterface
                     return null;
                 }
             }
-            
+
             else
             {
                 return null;
@@ -109,7 +106,7 @@ namespace CalculateTriangles.UserInterface
 
         }
 
-        private static void DisplaySortedList(SortedFigures<Triangle> triangles)
+        private static void DisplaySortedList(SortedShapes<Triangle> triangles)
         {
             foreach (var item in triangles.Figures)
             {

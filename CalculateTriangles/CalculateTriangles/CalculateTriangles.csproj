@@ -53,9 +53,9 @@
     <Compile Include="Messages\TextMessages.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TriangleElements\IFigure.cs" />
+    <Compile Include="TriangleElements\IShape.cs" />
     <Compile Include="TriangleElements\Triangle.cs" />
-    <Compile Include="TriangleElements\SortedFigures.cs" />
+    <Compile Include="TriangleElements\SortedShapes.cs" />
     <Compile Include="UserInterface\UI.cs" />
     <Compile Include="Validation\TrianglesValidator.cs" />
   </ItemGroup>

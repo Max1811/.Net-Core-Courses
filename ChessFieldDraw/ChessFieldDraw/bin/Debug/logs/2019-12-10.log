@@ -1,0 +1,9 @@
+2019-12-10 18:22:22.1461 DEBUG Field created
+2019-12-10 18:22:22.1771 DEBUG Trying to read parameters
+2019-12-10 18:22:22.1771 ERROR Wrong number of parametrs
+2019-12-10 18:22:22.1911 DEBUG Looping switch
+2019-12-10 18:22:24.3719 DEBUG Starting program:
+2019-12-10 18:22:24.3862 DEBUG Trying to convert data
+2019-12-10 18:22:33.1720 DEBUG Data converted
+2019-12-10 18:22:33.1835 INFO --------------------------------------------------
+2019-12-10 18:22:33.1905 DEBUG Looping switch

@@ -1,39 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace ChessFieldDraw.FieldComponents
 {
     public class ChessField : FieldSizing
     {
-        private Cell[,] field;
-        
-        public ChessField(int width, int height)
+        public Cell[,] Field { get; set; }
+        public CellSymbols DisplaySymbols { get; protected set; }
+
+        public ChessField(int width, int height, CellSymbols displaySymbols)
             : base(width, height)
         {
-            field = new Cell[Width, Height];
-            FieldMethods.InitializeField(field, Width, Height);
+            Field = new Cell[Width, Height];
+            DisplaySymbols = displaySymbols;
+            InitializeField();
         }
 
         public Cell this[int width, int height]
         {
             get
             {
-                return field[width, height];
+                return Field[width, height];
             }
             set
             {
-                field[width, height] = value;
+                Field[width, height] = value;
             }
         }
 
-        
-
-        public void DrawField(CellSymbols symbols)
+        public void InitializeField()
         {
-            FieldMethods.DisplayField(field, Width, Height, symbols);
+            for (int x = 0; x < Width; x++)
+            {
+                for (int y = 0; y < Height; y++)
+                {
+                    if ((x + y) % 2 == 1)
+                    {
+                        Field[x, y].Color = CellColors.White;
+                    }
+                    else
+                    {
+                        Field[x, y].Color = CellColors.Black;
+                    }
+                }
+            }
         }
     }
 }

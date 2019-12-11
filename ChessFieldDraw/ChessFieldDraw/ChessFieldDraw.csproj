@@ -55,11 +55,12 @@
     <Compile Include="FieldComponents\CellColors.cs" />
     <Compile Include="FieldComponents\CellSymbols.cs" />
     <Compile Include="FieldComponents\ChessField.cs" />
-    <Compile Include="FieldComponents\FieldMethods.cs" />
     <Compile Include="FieldComponents\FieldSizing.cs" />
+    <Compile Include="FieldComponents\ICell.cs" />
     <Compile Include="Messages\MessagesText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInterface\BoardUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

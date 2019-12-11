@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace ChessFieldDraw.FieldComponents
 {
-    public struct Cell
+    public struct Cell: ICell
     {
         public CellColors Color { get; set; }
 
+        
     }
 }

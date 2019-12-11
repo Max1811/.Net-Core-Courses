@@ -1,0 +1,6 @@
+D:\proga\courses\LuckyTickets\LuckyTickets\bin\Debug\LuckyTickets.exe.config
+D:\proga\courses\LuckyTickets\LuckyTickets\bin\Debug\LuckyTickets.exe
+D:\proga\courses\LuckyTickets\LuckyTickets\bin\Debug\LuckyTickets.pdb
+D:\proga\courses\LuckyTickets\LuckyTickets\obj\Debug\LuckyTickets.csprojAssemblyReference.cache
+D:\proga\courses\LuckyTickets\LuckyTickets\obj\Debug\LuckyTickets.exe
+D:\proga\courses\LuckyTickets\LuckyTickets\obj\Debug\LuckyTickets.pdb

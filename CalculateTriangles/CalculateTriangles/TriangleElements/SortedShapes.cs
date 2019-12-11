@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CalculateTriangles.TriangleElements
 {
-    public class SortedFigures<T>
+    public class SortedShapes<T> where T: IShape
     {
         public List<T> Figures { get; set; }
 
-        public SortedFigures()
+        public SortedShapes()
         {
             Figures = new List<T>();
         }
 
         public void Add(T figure)
         {
-            if(figure != null)
+            if (figure != null)
             {
                 Figures.Add(figure);
             }
@@ -27,6 +23,6 @@ namespace CalculateTriangles.TriangleElements
         {
             Figures.Sort();
         }
-        
+
     }
 }
