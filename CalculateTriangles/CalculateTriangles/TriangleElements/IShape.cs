@@ -1,6 +1,8 @@
-﻿namespace CalculateTriangles.TriangleElements
+﻿using System;
+
+namespace CalculateTriangles.TriangleElements
 {
-    public interface IShape
+    public interface IShape: IComparable<IShape>
     {
         string Name { get; set; }
         int NumberOfSides { get; set; }

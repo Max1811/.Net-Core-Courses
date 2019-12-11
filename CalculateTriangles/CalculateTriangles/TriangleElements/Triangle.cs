@@ -2,7 +2,7 @@
 
 namespace CalculateTriangles.TriangleElements
 {
-    public class Triangle : IShape, IComparable<IShape>
+    public class Triangle : IShape
     {
         public string Name { get; set; }
         public int NumberOfSides { get; set; } = 3;
