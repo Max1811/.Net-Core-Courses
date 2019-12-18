@@ -2,9 +2,9 @@
 {
     public class TextMessages
     {
-        public static readonly string Info = "'help' - for all commands, 'yes' to start/continue inputing the triangles, 'sort' to sort them all, 'exit' to end";
+        public const string Info = "'help' - for all commands, 'yes' to start/continue inputing the triangles, 'sort' to sort them all, 'exit' to end";
 
-        public static readonly string StarterLine = "---------------Triangles-------------- ";
+        public const string StarterLine = "---------------Triangles-------------- ";
 
         public const string InputTriangle = "Input triangle: Name,firstSide,secondSide,thirdSide";
         public const string StoppedProgram = "The program has been stopped";

@@ -2,24 +2,24 @@
 
 namespace CalculateTriangles.TriangleElements
 {
-    public class Triangle : IShape
+    public class Triangle : NumberOfSides, IShape
     {
-        public string Name { get; set; }
-        public int NumberOfSides { get; set; } = 3;
-        public double[] Sides { get; set; }
-        public double Perimetr { get; set; }
-        public double Square { get; set; }
+        public string Name { get; }
+        public double[] Sides { get; }
+        public double Perimetr { get; }
+        public double Square { get; }
 
         public Triangle(string name, params double[] integers)
         {
             Name = name;
             Sides = integers;
-            CountPerimetr();
-            CountSquare();
+            NUMBER_OF_SIDES = 3;
+            SetPerimetr();
+            SetSquare();
         }
 
         private double _halfPerimetr { get; set; }
-        public void CountPerimetr()
+        public void SetPerimetr()
         {
             if (Sides.Length == NumberOfSides)
             {
@@ -33,7 +33,7 @@ namespace CalculateTriangles.TriangleElements
             }
         }
 
-        public void CountSquare()
+        public void SetSquare()
         {
             if (Sides.Length == NumberOfSides)
             {

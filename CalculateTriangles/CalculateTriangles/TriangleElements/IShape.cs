@@ -2,13 +2,12 @@
 
 namespace CalculateTriangles.TriangleElements
 {
-    public interface IShape: IComparable<IShape>
+    interface IShape: IComparable<IShape>
     {
-        string Name { get; set; }
-        int NumberOfSides { get; set; }
-        double[] Sides { get; set; }
-        double Perimetr { get; set; }
-        double Square { get; set; }
-        void CountSquare();
+        string Name { get; }
+        double[] Sides { get; }
+        double Perimetr { get; }
+        double Square { get; }
+        void SetSquare();
     }
 }
