@@ -1,0 +1,6 @@
+D:\proga\courses\.Net-Core-Courses\SequenceTask\SequenceTask\bin\Debug\SequenceTask.exe.config
+D:\proga\courses\.Net-Core-Courses\SequenceTask\SequenceTask\bin\Debug\SequenceTask.exe
+D:\proga\courses\.Net-Core-Courses\SequenceTask\SequenceTask\bin\Debug\SequenceTask.pdb
+D:\proga\courses\.Net-Core-Courses\SequenceTask\SequenceTask\obj\Debug\SequenceTask.csprojAssemblyReference.cache
+D:\proga\courses\.Net-Core-Courses\SequenceTask\SequenceTask\obj\Debug\SequenceTask.exe
+D:\proga\courses\.Net-Core-Courses\SequenceTask\SequenceTask\obj\Debug\SequenceTask.pdb
