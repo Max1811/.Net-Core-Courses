@@ -42,7 +42,7 @@ namespace Envelopes
                         Array.Clear(args, 0, args.Length);
                     }
                     else
-                    {
+                    {   
                         firstEnvelopeSizing =
                         ConvertUsersInput(_envelopesUserInterface.GetEnvelopeFromUser(UIMessages.INPUT_FIRST_ENVELOPE));
 
@@ -60,11 +60,11 @@ namespace Envelopes
                 }
                 catch (FormatException ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    _envelopesUserInterface.DisplayExeption(ex.Message);
                 }
                 catch (ArgumentException ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    _envelopesUserInterface.DisplayExeption(ex.Message);
                 }
             }
 
@@ -104,9 +104,9 @@ namespace Envelopes
                 return envelope;
             }
 
-            Log.Logger.Information($"Not valid envelope's width:{envelope.Width} height:{envelope.Height} parametrs input");
+            Log.Logger.Warning($"Not valid envelope's width:{envelope.Width} height:{envelope.Height} parametrs input");
 
-            throw new ArgumentException("Invalid envelope size parametrs");
+            throw new ArgumentException(UIMessages.INVALID_PARAMETRS);
         }
 
         private double[] ConvertUsersInput(string[] envelopeSizing)
@@ -123,9 +123,9 @@ namespace Envelopes
                 }
                 catch
                 {
-                    Log.Logger.Information($"Can not convert inputed envelope's width and height");
+                    Log.Logger.Warning($"Can not convert inputed envelope's width and height");
 
-                    throw new FormatException("Invalid format of arguments");
+                    throw new FormatException(UIMessages.FORMAT_EXEPTION);
                 }
             }
 

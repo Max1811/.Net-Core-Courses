@@ -93,5 +93,11 @@ namespace Envelopes
             Console.WriteLine("\n" + new string('-', 50));
 
         }
+
+        internal void DisplayExeption(string message)
+        {
+            Log.Logger.Information($"Displaying the cause of exception");
+            Console.WriteLine(message);
+        }
     }
 }
