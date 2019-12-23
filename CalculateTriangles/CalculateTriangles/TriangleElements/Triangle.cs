@@ -9,19 +9,19 @@ namespace CalculateTriangles.TriangleElements
         public double Perimetr { get; }
         public double Square { get; }
 
-        public Triangle(string name, params double[] integers)
+        public Triangle(string name, int sides = 3, params double[] integers)
+            :base(sides)
         {
             Name = name;
             Sides = integers;
-            NUMBER_OF_SIDES = 3;
             SetPerimetr();
-            SetSquare();
+            Square = SetSquare();
         }
 
         private double _halfPerimetr { get; set; }
         public void SetPerimetr()
         {
-            if (Sides.Length == NumberOfSides)
+            if (Sides.Length == NUMBER_OF_SIDES)
             {
                 double sum = 0;
                 foreach (var item in Sides)
@@ -33,16 +33,17 @@ namespace CalculateTriangles.TriangleElements
             }
         }
 
-        public void SetSquare()
+        public double SetSquare()
         {
-            if (Sides.Length == NumberOfSides)
+            if (Sides.Length == NUMBER_OF_SIDES)
             {
                 double _firstSide = Sides[0];
                 double _secondSide = Sides[1];
                 double _thirdSide = Sides[2];
 
-                Square = Math.Sqrt(_halfPerimetr * (_halfPerimetr - _firstSide) * (_halfPerimetr - _secondSide) * (_halfPerimetr - _thirdSide));
+                return Math.Sqrt(_halfPerimetr * (_halfPerimetr - _firstSide) * (_halfPerimetr - _secondSide) * (_halfPerimetr - _thirdSide));
             }
+            else throw new InvalidOperationException("Invalid number of sides");
         }
 
         public int CompareTo(IShape obj)

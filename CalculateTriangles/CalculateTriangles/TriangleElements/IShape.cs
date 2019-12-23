@@ -8,6 +8,6 @@ namespace CalculateTriangles.TriangleElements
         double[] Sides { get; }
         double Perimetr { get; }
         double Square { get; }
-        void SetSquare();
+        double SetSquare();
     }
 }
