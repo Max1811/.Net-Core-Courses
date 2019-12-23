@@ -26,5 +26,8 @@ namespace Sequence.TextMessages
         public const string N = "n";
 
         public const string OUT_OF_RANGE_OF_EXEPTION_MESSAGE = "Too big 'to' inputed value ";
+        public const string INVALID_ARGUMENTS = "Invalid range! ";
+        public const string INVALID_TYPE_OFSEQUENCE = "Invalid type of sequence ";
+        public const string WRONG_INPUT_FORMAT = "Wrong type of parametrs";
     }
 }

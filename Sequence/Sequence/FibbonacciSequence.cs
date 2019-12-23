@@ -29,8 +29,8 @@ namespace Sequence
 
         private class FibonacciEnumerator : IEnumerator<int>
         {
-            private readonly int from;
-            private readonly int to;
+            private int from;
+            private int to;
             private int _current = 1;
             private int _prev = 0;
 
@@ -48,7 +48,8 @@ namespace Sequence
                 {
                     try
                     {
-                        if (_current >= from) break;
+                        int next = _current + _prev;
+                        if (next >= from) break;
                         MoveNext();
                     }
                     catch
@@ -59,9 +60,9 @@ namespace Sequence
                 }
             }
 
-            public int Current => _current;
+            public int Current => _prev;
 
-            object IEnumerator.Current => _current;
+            object IEnumerator.Current => _prev;
 
             public void Dispose()
             {
@@ -70,12 +71,21 @@ namespace Sequence
             public bool MoveNext()
             {
                 var result = _prev + _current;
-                _prev = _current;
-                if (result < to)
+                if (_prev <= to && _prev < int.MaxValue)
                 {
-                    _current = result;
+                    if (from <= 0)
+                    {
+                        from++;
+                    }
+                    else
+                    {
+                        _prev = _current;
+                        _current = result;
+                    }
+
                     return true;
                 }
+                
                 return false;
             }
 

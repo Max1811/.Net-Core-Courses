@@ -47,48 +47,76 @@ namespace Sequence
                         to = ConvertInput(_fibbonacciUserInterface.GetInputFromUser(UIMessages.INPUT_TO_NUMBER));
                     }
 
+                    Log.Logger.Information($"Successfully converted parametrs into int");
+
                     SequenceChoice choice = _fibbonacciUserInterface.GetSequenceChoiceFromUser();
 
                     ISequence sequence = GetSequenceByChoice(choice, from, to);
+
 
                     _fibbonacciUserInterface.Display(sequence);
                 }
                 catch (ArgumentException ex)
                 {
-                    Log.Logger.Information($"Exception {ex.Message}");
+                    Log.Logger.Warning($"Exception {ex.Message}");
+                    _fibbonacciUserInterface.DisplayErrorMessage(ex.Message);
                 }
                 catch (FormatException ex)
                 {
-                    Log.Logger.Information($"Exception {ex.Message}");
+                    _fibbonacciUserInterface.DisplayErrorMessage(ex.Message);
+                    Log.Logger.Warning($"Exception {ex.Message}");
                 }
             }
         }
 
         private ISequence GetSequenceByChoice(SequenceChoice choice, int from, int to)
         {
-            //TODO validate
+            Log.Logger.Information($"Creating a sequence");
+
+            SequenceValidator validator = new SequenceValidator();
+
+            ISequence fibbonacci = new FibbonacciSequence(from, to);
+            ISequence square = new SquareSequence(from, to);
+
+            Log.Logger.Information($"Validating a sequence");
             switch (choice)
             {
                 case SequenceChoice.Fibbonacci:
-                    return new FibbonacciSequence(from, to);
+                    if (validator.Validate(fibbonacci).IsValid)
+                    {
+                        Log.Logger.Information($"Fibbonacci sequence created and validated");
+                        return fibbonacci;
+                    }
+
+                    Log.Logger.Information($"Validation error");
+                    throw new ArgumentException(UIMessages.INVALID_ARGUMENTS);
 
                 case SequenceChoice.Square:
-                    return new SquareSequence(from, to);
+                    if (validator.Validate(fibbonacci).IsValid)
+                    {
+                        Log.Logger.Information($"Square sequence created and validated");
+                        return square;
+                    }
+                    Log.Logger.Information($"Validation error");
+                    throw new ArgumentException(UIMessages.INVALID_ARGUMENTS);
 
                 default:
-                    throw new ArgumentException();
+                    Log.Logger.Information($"There is no sequene with this type");
+
+                    throw new ArgumentException(UIMessages.INVALID_TYPE_OFSEQUENCE);
             }
         }
 
         private int ConvertInput(string usersInput)
         {
+            Log.Logger.Information($"Trying to convert input parametrs");
             try
             {
                 return Convert.ToInt32(usersInput);
             }
             catch 
             {
-                throw new FormatException();
+                throw new FormatException(UIMessages.WRONG_INPUT_FORMAT);
             }
         }
     }

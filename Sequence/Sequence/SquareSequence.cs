@@ -48,7 +48,8 @@ namespace Sequence
                 {
                     try
                     {
-                        if (_square >= from) break;
+                        int next = _current * _current;
+                        if (next >= from) break;
                         MoveNext();
                     }
                     catch
@@ -69,11 +70,11 @@ namespace Sequence
 
             public bool MoveNext()
             {
-                var result = _square;
+                _square = _current * _current;
 
-                if (result < to)
+                if (_square <= to)
                 {
-                    _square = _current * _current;
+                    
                     _current++;
                     return true;
                 }

@@ -72,6 +72,12 @@ namespace Sequence
             Console.WriteLine(UIMessages.END_LINE);
         }
 
+        internal void DisplayErrorMessage(string message)
+        {
+            Log.Logger.Information($"Displaying sequence");
+            Console.WriteLine(message);
+        }
+
         public SequenceChoice GetSequenceChoiceFromUser()
         {
             Console.WriteLine(UIMessages.SEQUENCE_CHOICE);
