@@ -2,7 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Sequence
 {
@@ -48,8 +47,7 @@ namespace Sequence
                 {
                     try
                     {
-                        int next = _current + _prev;
-                        if (next >= from) break;
+                        if (_current >= from) break;
                         MoveNext();
                     }
                     catch
@@ -71,7 +69,7 @@ namespace Sequence
             public bool MoveNext()
             {
                 var result = _prev + _current;
-                if (_prev <= to && _prev < int.MaxValue)
+                if (_current <= to && _current < int.MaxValue)
                 {
                     if (from <= 0)
                     {

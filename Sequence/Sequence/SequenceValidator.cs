@@ -9,7 +9,7 @@ namespace Sequence
     {
         public SequenceValidator()
         {
-            //RuleFor(sequence => sequence.From).GreaterThan(sequence => 0);
+            RuleFor(sequence => sequence.From).GreaterThan(sequence => 0);
 
             RuleFor(sequence => sequence.To).GreaterThan(sequence => 1);
 

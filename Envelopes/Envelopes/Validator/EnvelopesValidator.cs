@@ -2,7 +2,7 @@
 
 namespace Envelopes.Validator
 {
-    public class EnvelopesValidator : AbstractValidator<Envelope>
+    public class EnvelopesValidator : AbstractValidator<IEnvelope>
     {
 
         public EnvelopesValidator()

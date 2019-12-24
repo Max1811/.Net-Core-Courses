@@ -29,15 +29,15 @@ namespace Envelopes
                 {
                     Log.Logger.Information($"User is inputting parametrs");
 
-                    if(args.Length != 0)
+                    if(args.Length != 0 && args.Length == ENVELOPE_PARAMETRS)
                     {
-                        if(args.Length > 2)
+                        if(args.Length > ENVELOPE_PARAMETRS)
                         {
                             throw new ArgumentException();
                         }
 
-                        firstEnvelopeSizing = ConvertUsersInput(_envelopesUserInterface.GetEnvelopeFromUser(args[0]));
-                        secondEnvelopeSizing = ConvertUsersInput(_envelopesUserInterface.GetEnvelopeFromUser(args[1]));
+                        firstEnvelopeSizing = ConvertUsersInput(args[0].Split(' '));
+                        secondEnvelopeSizing = ConvertUsersInput(args[1].Split(' '));
 
                         Array.Clear(args, 0, args.Length);
                     }
@@ -50,9 +50,9 @@ namespace Envelopes
                         ConvertUsersInput(_envelopesUserInterface.GetEnvelopeFromUser(UIMessages.INPUT_SECOND_ENVELOPE));
                     }
                     
-                    Envelope firstEnvelope = SetEnvelope(firstEnvelopeSizing);
+                    IEnvelope firstEnvelope = SetEnvelope(firstEnvelopeSizing);
 
-                    Envelope secondEnvelope = SetEnvelope(secondEnvelopeSizing);
+                    IEnvelope secondEnvelope = SetEnvelope(secondEnvelopeSizing);
 
                     ContainStates state = IsContains(firstEnvelope, secondEnvelope);
 
@@ -70,7 +70,7 @@ namespace Envelopes
 
         }
 
-        private ContainStates IsContains(Envelope firstEnvelope, Envelope secondEnvelope)
+        private ContainStates IsContains(IEnvelope firstEnvelope, IEnvelope secondEnvelope)
         {
             Log.Logger.Information($"Checking is envelope fits to another one");
 

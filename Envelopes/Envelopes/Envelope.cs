@@ -1,6 +1,6 @@
 ﻿namespace Envelopes
 {
-    public class Envelope : IEnvelope, IContainable<Envelope>
+    public class Envelope : IEnvelope
     {
         public double Width { get; protected set; }
         public double Height { get; protected set; }
@@ -16,7 +16,7 @@
             Height = parametrs[1];
         }
 
-        public bool IsFits(Envelope secondEnvelope)
+        public bool IsFits(IEnvelope secondEnvelope)
         {
             return (Height > secondEnvelope.Height && Width > secondEnvelope.Width) 
                 || (Height > secondEnvelope.Width && Width > secondEnvelope.Height);

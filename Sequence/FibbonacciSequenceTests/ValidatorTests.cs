@@ -1,7 +1,5 @@
 ﻿using Sequence;
-using System;
 using Xunit;
-using FluentValidation;
 
 namespace FibbonacciSequenceTests
 {
@@ -25,9 +23,9 @@ namespace FibbonacciSequenceTests
 
         [Theory]
         [InlineData(1, 0)]
-        [InlineData(0, 35)]
+        [InlineData(0, -1)]
         [InlineData(0, 0)]
-        [InlineData(-2, 2)]
+        [InlineData(-2, -2)]
         [InlineData(4545, -332)]
         [InlineData(-2323, -994)]
         [InlineData(1, 1)]
@@ -59,9 +57,9 @@ namespace FibbonacciSequenceTests
 
         [Theory]
         [InlineData(1, 0)]
-        [InlineData(0, 35)]
+        [InlineData(36, 35)]
         [InlineData(0, 0)]
-        [InlineData(-2, 2)]
+        [InlineData(-2, -2)]
         [InlineData(4545, -332)]
         [InlineData(-2323, -994)]
         [InlineData(1, 1)]

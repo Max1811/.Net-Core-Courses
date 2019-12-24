@@ -1,8 +1,6 @@
 ﻿using Sequence.TextMessages;
 using Serilog;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sequence
 {
@@ -11,6 +9,7 @@ namespace Sequence
         private readonly FibbonacciUI _fibbonacciUserInterface;
 
         private const int SEQUENCE_PARAMETRS = 2;
+        private const int MAX_INT_LENGTH = 9;
 
         public FibbonacciSequenceApp()
         {
